@@ -10,7 +10,7 @@ def create(name):
 
     bot = ChatBot(name = name,
                   read_only = False,                  
-                  logic_adapters = ["chatterbot.logic.BestMatch"],                 
+                  logic_adapters = ["chatterbot.logic.BestMatch", "chatterbot.logic.TimeLogicAdapter"],                 
                   storage_adapter = "chatterbot.storage.SQLStorageAdapter")
 
     return bot
